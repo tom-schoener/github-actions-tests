@@ -19,10 +19,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: Create local changes
       run: |
         touch test.txt
+        echo "test" > test.txt
+        git status
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
