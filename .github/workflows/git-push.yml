@@ -20,6 +20,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
+    - name: Install packages
+      run: sudo apt-get install xmlstarlet
     - name: Create local changes
       run: |
         ./release/test.sh
