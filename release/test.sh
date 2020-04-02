@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "test" > test.txt
+echo "$(dirname "$0")" > test.txt
